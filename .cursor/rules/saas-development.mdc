@@ -1,0 +1,105 @@
+---
+alwaysApply: true
+---
+
+# SaaS Starter Kit 개발 규칙
+
+## 프로젝트 개요
+
+이 프로젝트는 Next.js 기반 SaaS 서비스 개발을 위한 스타터 킷입니다.
+점진적으로 기능을 추가하며 확장 가능한 구조를 유지합니다.
+
+## 프레임워크 & 아키텍처
+
+-   모든 라우팅과 페이지 구조는 **Next.js App Router** 사용
+-   Route Groups를 활용한 논리적 구조 분리
+    -   `(marketing)`: 마케팅 페이지 (랜딩, 가격, 소개)
+    -   `(auth)`: 인증 페이지 (섹션 3부터)
+    -   `(dashboard)`: 로그인 후 대시보드 (섹션 3부터)
+-   가능한 경우 React Server Components 패턴을 따름
+-   클라이언트 컴포넌트(`'use client'`)는 필요한 경우에만 사용
+
+## 스타일링
+
+-   모든 스타일링은 **Tailwind CSS** 사용
+-   **모바일 퍼스트** 반응형 디자인 접근 방식 따름
+-   Tailwind 브레이크포인트 사용: `sm:` (640px), `md:` (768px), `lg:` (1024px), `xl:` (1280px), `2xl:` (1536px)
+-   커스텀 CSS보다 Tailwind 유틸리티 클래스 선호
+-   일관된 spacing 스케일 사용 (4, 8, 12, 16, 24, 32, 48, 64, 96, 128)
+
+## 컴포넌트 라이브러리
+
+-   공통 UI 요소는 **ShadCN UI** 컴포넌트 사용
+-   필요에 따라 `pnpm dlx shadcn@latest add [component]`로 컴포넌트 설치
+-   Tailwind 클래스를 사용하여 ShadCN 컴포넌트 커스터마이징
+-   ShadCN 컴포넌트는 `app/components/ui/` 디렉토리에 유지
+
+## 인터랙션 & 애니메이션
+
+-   Tailwind를 사용한 **기본 호버 효과** 구현 (`hover:`, `transition-all`, `duration-300`)
+-   부드러운 상태 변화를 위해 **CSS transitions** 사용
+-   Intersection Observer API를 사용한 **스크롤 애니메이션** 구현
+-   무거운 JavaScript 라이브러리보다 CSS 기반 애니메이션 선호
+-   애니메이션은 미묘하고 목적이 명확하게 유지
+
+## 이미지 & 미디어
+
+-   사용자가 특정 에셋을 제공하지 않는 한 플레이스홀더 이미지는 **Unsplash** 사용
+-   최적화된 이미지 로딩을 위해 Next.js `<Image>` 컴포넌트 사용
+-   접근성을 위한 적절한 `alt` 텍스트 제공
+-   다양한 브레이크포인트에 적합한 이미지 크기 사용
+
+## CTA & 사용자 액션
+
+-   CTA 버튼은 기본적으로 **모달 다이얼로그** 열기 (ShadCN Dialog 사용)
+-   명확하고 액션 지향적인 버튼 텍스트 사용
+-   접근성을 위한 적절한 포커스 상태 구현
+-   해당되는 경우 로딩 상태 표시
+
+## 코드 구조
+
+```
+app/
+  (marketing)/            # 마케팅 페이지 (랜딩, 가격, 소개 등)
+    page.tsx
+    layout.tsx
+  (auth)/                 # 인증 페이지 (로그인, 회원가입 등)
+  (dashboard)/            # 대시보드 (로그인 후 사용자 영역)
+  api/                    # API 라우트
+  components/
+    marketing/            # 마케팅 관련 컴포넌트
+    auth/                 # 인증 관련 컴포넌트
+    dashboard/            # 대시보드 관련 컴포넌트
+    ui/                   # ShadCN UI 컴포넌트
+  globals.css
+  layout.tsx              # 루트 레이아웃
+lib/                      # 유틸리티 함수 & 비즈니스 로직
+config/                   # 설정 파일
+```
+
+## 모범 사례
+
+-   시맨틱 HTML 작성 (적절한 제목 계층, sections, articles)
+-   접근성 보장 (ARIA 레이블, 키보드 내비게이션, 스크린 리더 지원)
+-   성능 최적화 (지연 로딩, 코드 스플리팅)
+-   타입 안정성을 위해 TypeScript 사용
+-   디자인 문서의 한국어 콘텐츠 가이드라인 준수
+-   컴포넌트는 집중적이고 재사용 가능하게 유지
+-   일관된 네이밍 컨벤션:
+    -   컴포넌트: PascalCase (예: `HeroSection.tsx`)
+    -   함수/변수: camelCase (예: `getUserData`)
+    -   상수: UPPER_SNAKE_CASE (예: `MAX_UPLOAD_SIZE`)
+
+## 반응형 디자인 우선순위
+
+1. **모바일** (320px - 640px): 단일 컬럼, 스택 레이아웃
+2. **태블릿** (641px - 1024px): 간격 최적화, 적절한 경우 2컬럼 고려
+3. **데스크톱** (1025px+): 다중 컬럼 레이아웃, 큰 타이포그래피, 향상된 간격
+
+## 색상 체계
+
+-   전문적이고 현대적인 색상 팔레트 사용
+-   접근성을 위한 충분한 대비 유지 (최소 WCAG AA)
+-   CSS 변수를 사용하여 `globals.css`에 커스텀 색상 정의
+-   의미론적 색상 이름 사용 (primary, secondary, accent 등)
+-   다크모드 지원 고려
