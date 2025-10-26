@@ -22,13 +22,13 @@ const faqs = [
 
 export function FAQSection() {
     return (
-        <section className="bg-linear-to-b from-gray-50 to-white py-16 sm:py-24">
+        <section className="bg-gradient-to-b from-muted/50 to-background py-16 sm:py-24">
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h2 className="break-words text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+                    <h2 className="break-words text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
                         자주 묻는 질문
                     </h2>
-                    <p className="mt-6 break-words text-lg leading-relaxed text-gray-600">
+                    <p className="mt-6 break-words text-lg leading-relaxed text-muted-foreground">
                         FlowPilot에 대해 궁금하신 점을 확인하세요
                     </p>
                 </div>
@@ -39,12 +39,12 @@ export function FAQSection() {
                             <AccordionItem
                                 key={index}
                                 value={`item-${index}`}
-                                className="rounded-lg border border-gray-200 bg-white px-6 shadow-sm"
+                                className="rounded-lg border border-border bg-card px-6 shadow-sm"
                             >
-                                <AccordionTrigger className="break-words text-left text-lg font-semibold leading-tight text-gray-900 hover:text-blue-600 hover:no-underline">
+                                <AccordionTrigger className="break-words text-left text-lg font-semibold leading-tight text-card-foreground hover:text-primary hover:no-underline">
                                     {faq.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="break-words leading-relaxed text-gray-600">
+                                <AccordionContent className="break-words leading-relaxed text-muted-foreground">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>
