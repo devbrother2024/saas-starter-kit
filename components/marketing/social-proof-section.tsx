@@ -4,50 +4,53 @@ import { Separator } from '@/components/ui/separator'
 
 export function SocialProofSection() {
     return (
-        <section className="bg-background py-16 sm:py-24">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-background py-16 sm:py-24 relative overflow-hidden">
+            {/* 배경 그라데이션 */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* 통계 */}
-                <div className="mb-12 grid gap-8 sm:grid-cols-3">
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-primary sm:text-5xl">
+                <div className="mb-16 grid gap-8 sm:grid-cols-3">
+                    <div className="text-center group">
+                        <div className="text-5xl font-bold text-primary sm:text-6xl gradient-text transition-transform duration-300 group-hover:scale-110">
                             41%
                         </div>
-                        <div className="mt-2 text-lg font-semibold text-foreground">
+                        <div className="mt-3 text-lg font-semibold text-foreground">
                             후속 완료율 증가
                         </div>
-                        <div className="mt-1 text-sm text-muted-foreground">
+                        <div className="mt-2 text-sm text-muted-foreground">
                             287개 팀 베타 테스트 결과
                         </div>
                     </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-primary sm:text-5xl">
+                    <div className="text-center group">
+                        <div className="text-5xl font-bold text-primary sm:text-6xl gradient-text transition-transform duration-300 group-hover:scale-110">
                             4시간
                         </div>
-                        <div className="mt-2 text-lg font-semibold text-foreground">
+                        <div className="mt-3 text-lg font-semibold text-foreground">
                             주당 시간 절약
                         </div>
-                        <div className="mt-1 text-sm text-muted-foreground">
+                        <div className="mt-2 text-sm text-muted-foreground">
                             평균 사용자 기준
                         </div>
                     </div>
-                    <div className="text-center">
-                        <div className="text-4xl font-bold text-primary sm:text-5xl">
+                    <div className="text-center group">
+                        <div className="text-5xl font-bold text-primary sm:text-6xl gradient-text transition-transform duration-300 group-hover:scale-110">
                             1,200+
                         </div>
-                        <div className="mt-2 text-lg font-semibold text-foreground">
+                        <div className="mt-3 text-lg font-semibold text-foreground">
                             팀이 사용 중
                         </div>
-                        <div className="mt-1 text-sm text-muted-foreground">
+                        <div className="mt-2 text-sm text-muted-foreground">
                             만족도 4.8/5
                         </div>
                     </div>
                 </div>
 
-                <Separator className="my-12" />
+                <Separator className="my-16" />
 
                 {/* 고객 후기 */}
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <div className="rounded-2xl bg-gradient-to-br from-muted to-accent/50 p-8 shadow-lg">
+                    <div className="group rounded-2xl bg-card border border-border hover:border-primary/50 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                         <div className="mb-4 flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star
@@ -80,7 +83,7 @@ export function SocialProofSection() {
                         </div>
                     </div>
 
-                    <div className="rounded-2xl bg-gradient-to-br from-accent/50 to-secondary p-8 shadow-lg">
+                    <div className="group rounded-2xl bg-card border border-border hover:border-primary/50 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                         <div className="mb-4 flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star
@@ -114,7 +117,7 @@ export function SocialProofSection() {
                         </div>
                     </div>
 
-                    <div className="rounded-2xl bg-gradient-to-br from-secondary to-muted p-8 shadow-lg">
+                    <div className="group rounded-2xl bg-card border border-border hover:border-primary/50 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                         <div className="mb-4 flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <Star
