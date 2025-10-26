@@ -57,7 +57,8 @@ export function HeroSection() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-base sm:text-lg md:text-xl lg:text-2xl text-center max-w-3xl text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
-                    캘린더·Zoom·Google Meet·Microsoft Teams와 연동해{' '}
+                    캘린더·Zoom·Google Meet·Microsoft Teams와 연동해
+                    <br />
                     <span className="font-semibold text-gray-900 dark:text-white">
                         자동 요약, 책임자 지정 액션아이템, CRM/프로젝트 툴 싱크
                     </span>

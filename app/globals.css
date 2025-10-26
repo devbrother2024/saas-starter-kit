@@ -327,3 +327,24 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-muted-foreground/50;
 }
+
+/* Aurora Background 변수 및 애니메이션 */
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+    --transparent: rgba(255, 255, 255, 0);
+    --blue-500: rgba(59, 130, 246, 0.5);
+    --indigo-300: rgba(165, 180, 252, 0.5);
+    --blue-300: rgba(147, 197, 253, 0.5);
+    --violet-200: rgba(221, 214, 254, 0.5);
+    --blue-400: rgba(96, 165, 250, 0.5);
+}
+
+@keyframes aurora {
+    from {
+        background-position: 50% 50%, 50% 50%;
+    }
+    to {
+        background-position: 350% 50%, 350% 50%;
+    }
+}

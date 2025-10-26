@@ -82,7 +82,7 @@ export function ProblemSection() {
                 <div className="mt-16">
                     <div className="relative h-96 overflow-hidden rounded-2xl shadow-2xl md:h-[32rem]">
                         <Image
-                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=900&fit=crop"
+                            src="/checklist.png"
                             alt="분주한 회의 후 흩어진 메모와 미완료 체크리스트"
                             fill
                             className="object-cover"

@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
+import Image from 'next/image'
 
 export function SocialProofSection() {
     return (
@@ -69,7 +70,7 @@ export function SocialProofSection() {
                         <div className="mt-6 flex items-center gap-3">
                             <Avatar>
                                 <AvatarImage
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&q=80"
                                     alt="베타 테스트 참가자"
                                 />
                                 <AvatarFallback>BT</AvatarFallback>
@@ -103,7 +104,7 @@ export function SocialProofSection() {
                         <div className="mt-6 flex items-center gap-3">
                             <Avatar>
                                 <AvatarImage
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&q=80"
                                     alt="김서연"
                                 />
                                 <AvatarFallback>김서</AvatarFallback>
@@ -136,7 +137,7 @@ export function SocialProofSection() {
                         <div className="mt-6 flex items-center gap-3">
                             <Avatar>
                                 <AvatarImage
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&q=80"
                                     alt="박민준"
                                 />
                                 <AvatarFallback>박민</AvatarFallback>
@@ -158,78 +159,50 @@ export function SocialProofSection() {
                     <p className="mb-8 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                         신뢰받는 기업들이 사용하고 있습니다
                     </p>
-                    <div className="grid grid-cols-2 gap-8 opacity-70 grayscale md:grid-cols-4">
-                        {/* 삼성 */}
-                        <div className="flex items-center justify-center rounded-lg bg-card p-8">
-                            <svg
-                                className="h-10 w-auto"
-                                viewBox="0 0 200 60"
-                                fill="currentColor"
-                            >
-                                <text
-                                    x="50%"
-                                    y="50%"
-                                    dominantBaseline="middle"
-                                    textAnchor="middle"
-                                    className="text-3xl font-bold"
-                                >
-                                    SAMSUNG
-                                </text>
-                            </svg>
+                    <div className="grid grid-cols-2 gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-300 md:grid-cols-4">
+                        {/* Google */}
+                        <div className="flex items-center justify-center rounded-lg bg-card p-8 hover:opacity-100 transition-opacity">
+                            <div className="relative w-32 h-10">
+                                <Image
+                                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                                    alt="Google"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        {/* 네이버 */}
-                        <div className="flex items-center justify-center rounded-lg bg-card p-8">
-                            <svg
-                                className="h-10 w-auto"
-                                viewBox="0 0 200 60"
-                                fill="currentColor"
-                            >
-                                <text
-                                    x="50%"
-                                    y="50%"
-                                    dominantBaseline="middle"
-                                    textAnchor="middle"
-                                    className="text-3xl font-bold"
-                                >
-                                    NAVER
-                                </text>
-                            </svg>
+                        {/* Microsoft */}
+                        <div className="flex items-center justify-center rounded-lg bg-card p-8 hover:opacity-100 transition-opacity">
+                            <div className="relative w-32 h-10">
+                                <Image
+                                    src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                                    alt="Microsoft"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        {/* 카카오 */}
-                        <div className="flex items-center justify-center rounded-lg bg-card p-8">
-                            <svg
-                                className="h-10 w-auto"
-                                viewBox="0 0 200 60"
-                                fill="currentColor"
-                            >
-                                <text
-                                    x="50%"
-                                    y="50%"
-                                    dominantBaseline="middle"
-                                    textAnchor="middle"
-                                    className="text-3xl font-bold"
-                                >
-                                    Kakao
-                                </text>
-                            </svg>
+                        {/* Salesforce */}
+                        <div className="flex items-center justify-center rounded-lg bg-card p-8 hover:opacity-100 transition-opacity">
+                            <div className="relative w-32 h-10">
+                                <Image
+                                    src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg"
+                                    alt="Salesforce"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        {/* 쿠팡 */}
-                        <div className="flex items-center justify-center rounded-lg bg-card p-8">
-                            <svg
-                                className="h-10 w-auto"
-                                viewBox="0 0 200 60"
-                                fill="currentColor"
-                            >
-                                <text
-                                    x="50%"
-                                    y="50%"
-                                    dominantBaseline="middle"
-                                    textAnchor="middle"
-                                    className="text-3xl font-bold"
-                                >
-                                    Coupang
-                                </text>
-                            </svg>
+                        {/* Slack */}
+                        <div className="flex items-center justify-center rounded-lg bg-card p-8 hover:opacity-100 transition-opacity">
+                            <div className="relative w-32 h-10">
+                                <Image
+                                    src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg"
+                                    alt="Slack"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

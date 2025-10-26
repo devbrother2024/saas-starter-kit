@@ -13,18 +13,16 @@ import { ArrowRight, Shield } from 'lucide-react'
 
 export function FinalCTASection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-secondary py-16 sm:py-24">
-            {/* 배경 패턴 */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
-            </div>
+        <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/30 py-16 sm:py-24">
+            {/* 부드러운 배경 그라데이션 */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent"></div>
 
             <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h2 className="break-words text-3xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl">
+                    <h2 className="break-words text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
                         지금 바로 체험하기
                     </h2>
-                    <p className="mt-6 break-words text-lg leading-relaxed text-primary-foreground/80 sm:text-xl md:text-2xl">
+                    <p className="mt-6 break-words text-lg leading-relaxed text-muted-foreground sm:text-xl">
                         회의의 모든 후속 조치를 자동화하고,
                         <br className="hidden sm:block" />
                         팀의 실행력을 높여보세요.
@@ -35,7 +33,7 @@ export function FinalCTASection() {
                             <DialogTrigger asChild>
                                 <Button
                                     size="lg"
-                                    variant="secondary"
+                                    variant="default"
                                     className="group w-full gap-2 px-8 py-6 text-lg font-semibold sm:w-auto"
                                 >
                                     지금 무료로 시작하기
@@ -61,14 +59,14 @@ export function FinalCTASection() {
 
                     {/* FUD 감소 문구 */}
                     <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
-                        <div className="flex items-center gap-2 text-primary-foreground/80">
-                            <Shield className="h-5 w-5" />
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                            <Shield className="h-5 w-5 text-primary" />
                             <span className="text-sm font-medium">
                                 언제든 해지 가능
                             </span>
                         </div>
-                        <div className="flex items-center gap-2 text-primary-foreground/80">
-                            <Shield className="h-5 w-5" />
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                            <Shield className="h-5 w-5 text-primary" />
                             <span className="text-sm font-medium">
                                 데이터는 안전하게 보호됩니다
                             </span>
@@ -76,28 +74,28 @@ export function FinalCTASection() {
                     </div>
 
                     {/* 추가 신뢰 지표 */}
-                    <div className="mt-12 grid gap-8 border-t border-primary-foreground/20 pt-12 sm:grid-cols-3">
+                    <div className="mt-12 grid gap-8 border-t border-border pt-12 sm:grid-cols-3">
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-primary-foreground">
+                            <div className="text-3xl font-bold text-foreground">
                                 1,200+
                             </div>
-                            <div className="mt-1 text-sm text-primary-foreground/80">
+                            <div className="mt-1 text-sm text-muted-foreground">
                                 팀이 사용 중
                             </div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-primary-foreground">
+                            <div className="text-3xl font-bold text-foreground">
                                 4.8/5
                             </div>
-                            <div className="mt-1 text-sm text-primary-foreground/80">
+                            <div className="mt-1 text-sm text-muted-foreground">
                                 평균 만족도
                             </div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-primary-foreground">
+                            <div className="text-3xl font-bold text-foreground">
                                 SOC 2
                             </div>
-                            <div className="mt-1 text-sm text-primary-foreground/80">
+                            <div className="mt-1 text-sm text-muted-foreground">
                                 보안 인증
                             </div>
                         </div>

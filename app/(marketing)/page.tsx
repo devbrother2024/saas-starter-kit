@@ -12,9 +12,15 @@ export default function Home() {
             <HeroSection />
             <SocialProofSection />
             <ProblemSection />
-            <SolutionSection />
-            <PricingSection />
-            <FAQSection />
+            <div id="features">
+                <SolutionSection />
+            </div>
+            <div id="pricing">
+                <PricingSection />
+            </div>
+            <div id="faq">
+                <FAQSection />
+            </div>
             <FinalCTASection />
         </div>
     )

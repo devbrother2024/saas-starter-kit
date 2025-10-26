@@ -7,6 +7,7 @@ import {
     TooltipProvider,
     TooltipTrigger
 } from '@/components/ui/tooltip'
+import Image from 'next/image'
 
 export function SolutionSection() {
     return (
@@ -19,13 +20,12 @@ export function SolutionSection() {
                         </h2>
                     </div>
 
-                    <div className="mt-16 grid gap-12 lg:grid-cols-3">
+                    <div className="mt-16 grid gap-8 lg:grid-cols-3">
                         {/* 핵심 이점 1 */}
                         <div className="group relative flex">
-                            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-25 blur transition duration-300 group-hover:opacity-75"></div>
-                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg">
-                                <div className="mb-6 inline-flex rounded-lg bg-primary/10 p-4">
-                                    <CheckCircle2 className="h-10 w-10 flex-shrink-0 text-primary" />
+                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-300">
+                                <div className="mb-6 inline-flex rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-4 w-fit">
+                                    <CheckCircle2 className="h-8 w-8 flex-shrink-0 text-primary" />
                                 </div>
                                 <h3 className="mb-4 break-words text-2xl font-bold leading-tight text-card-foreground">
                                     자동 요약·액션아이템·책임자 지정
@@ -93,44 +93,93 @@ export function SolutionSection() {
 
                         {/* 핵심 이점 2 */}
                         <div className="group relative flex">
-                            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent to-secondary opacity-25 blur transition duration-300 group-hover:opacity-75"></div>
-                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg">
-                                <div className="mb-6 inline-flex rounded-lg bg-accent p-4">
-                                    <Zap className="h-10 w-10 flex-shrink-0 text-accent-foreground" />
+                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg border border-border hover:shadow-xl hover:border-accent/50 transition-all duration-300">
+                                <div className="mb-6 inline-flex rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 p-4 w-fit">
+                                    <Zap className="h-8 w-8 flex-shrink-0 text-accent-foreground" />
                                 </div>
                                 <h3 className="mb-4 break-words text-2xl font-bold leading-tight text-card-foreground">
                                     업무 도구와 양방향 싱크
                                 </h3>
-                                <p className="mb-4 break-words text-muted-foreground">
+                                <p className="mb-6 break-words text-muted-foreground">
                                     Jira, Asana, Linear, Notion, HubSpot,
                                     Salesforce에 자동 생성·업데이트.
                                 </p>
-                                <div className="mt-auto grid grid-cols-2 gap-3 pt-4">
-                                    {[
-                                        'Jira',
-                                        'Asana',
-                                        'Linear',
-                                        'Notion',
-                                        'HubSpot',
-                                        'Salesforce'
-                                    ].map(tool => (
-                                        <div
-                                            key={tool}
-                                            className="break-words rounded-lg bg-muted px-3 py-2 text-center text-sm font-medium text-muted-foreground"
-                                        >
-                                            {tool}
+                                <div className="mt-auto flex flex-wrap items-center gap-4 pt-4">
+                                    {/* Jira */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/jira/0052CC"
+                                                alt="Jira"
+                                                fill
+                                                className="object-contain"
+                                            />
                                         </div>
-                                    ))}
+                                    </div>
+                                    {/* Asana */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/asana/F06A6A"
+                                                alt="Asana"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* Linear */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/linear/5E6AD2"
+                                                alt="Linear"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* Notion */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/notion/000000"
+                                                alt="Notion"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* HubSpot */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/hubspot/FF7A59"
+                                                alt="HubSpot"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* Salesforce */}
+                                    <div className="group transition-opacity hover:opacity-70">
+                                        <div className="relative w-8 h-8 flex-shrink-0">
+                                            <Image
+                                                src="https://cdn.simpleicons.org/salesforce/00A1E0"
+                                                alt="Salesforce"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* 핵심 이점 3 */}
                         <div className="group relative flex">
-                            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-secondary to-destructive opacity-25 blur transition duration-300 group-hover:opacity-75"></div>
-                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg">
-                                <div className="mb-6 inline-flex rounded-lg bg-secondary p-4">
-                                    <Lock className="h-10 w-10 flex-shrink-0 text-secondary-foreground" />
+                            <div className="relative flex flex-col rounded-2xl bg-card p-8 shadow-lg border border-border hover:shadow-xl hover:border-purple-500/50 transition-all duration-300">
+                                <div className="mb-6 inline-flex rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 p-4 w-fit">
+                                    <Lock className="h-8 w-8 flex-shrink-0 text-purple-600" />
                                 </div>
                                 <h3 className="mb-4 break-words text-2xl font-bold leading-tight text-card-foreground">
                                     엔터프라이즈 보안·거버넌스
@@ -166,16 +215,16 @@ export function SolutionSection() {
                     {/* 데모 비디오 영역 */}
                     <div className="mt-16">
                         <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-muted to-accent p-8 shadow-2xl">
-                            <div className="aspect-video overflow-hidden rounded-lg bg-primary shadow-lg">
-                                <div className="flex h-full items-center justify-center text-primary-foreground">
-                                    <div className="text-center">
-                                        <div className="mb-4 text-6xl">▶</div>
-                                        <p className="text-lg">
-                                            Zoom/Meet 실사용 데모 — 라이브
-                                            캡션→요약→액션아이템→툴 싱크
-                                        </p>
-                                    </div>
-                                </div>
+                            <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/smW3raqdTv0"
+                                    title="FlowPilot Demo"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                    className="w-full h-full"
+                                ></iframe>
                             </div>
                         </div>
                     </div>
