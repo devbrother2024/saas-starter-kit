@@ -32,7 +32,7 @@ alwaysApply: true
 -   공통 UI 요소는 **ShadCN UI** 컴포넌트 사용
 -   필요에 따라 `pnpm dlx shadcn@latest add [component]`로 컴포넌트 설치
 -   Tailwind 클래스를 사용하여 ShadCN 컴포넌트 커스터마이징
--   ShadCN 컴포넌트는 `app/components/ui/` 디렉토리에 유지
+-   ShadCN 컴포넌트는 루트 레벨 `components/ui/` 디렉토리에 유지
 
 ## 인터랙션 & 애니메이션
 
@@ -66,13 +66,13 @@ app/
   (auth)/                 # 인증 페이지 (로그인, 회원가입 등)
   (dashboard)/            # 대시보드 (로그인 후 사용자 영역)
   api/                    # API 라우트
-  components/
-    marketing/            # 마케팅 관련 컴포넌트
-    auth/                 # 인증 관련 컴포넌트
-    dashboard/            # 대시보드 관련 컴포넌트
-    ui/                   # ShadCN UI 컴포넌트
   globals.css
   layout.tsx              # 루트 레이아웃
+components/               # 루트 레벨 컴포넌트 디렉토리
+  marketing/              # 마케팅 관련 컴포넌트
+  auth/                   # 인증 관련 컴포넌트
+  dashboard/              # 대시보드 관련 컴포넌트
+  ui/                     # ShadCN UI 컴포넌트
 lib/                      # 유틸리티 함수 & 비즈니스 로직
 config/                   # 설정 파일
 ```
