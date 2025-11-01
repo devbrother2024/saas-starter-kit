@@ -135,6 +135,78 @@ app/
 -   **일관된 spacing**: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128
 -   **접근성**: WCAG AA 이상 준수
 
+## 배포 후 체크리스트
+
+### 환경 변수 설정
+
+-   [ ] 프로덕션 환경 변수 설정 (`.env.production`)
+-   [ ] API 엔드포인트 URL 확인
+-   [ ] 외부 서비스 API 키 확인 (필요시)
+-   [ ] 데이터베이스 연결 정보 확인
+
+### 기본 기능 확인
+
+-   [ ] 랜딩 페이지 로딩 확인
+-   [ ] 반응형 디자인 확인 (모바일, 태블릿, 데스크톱)
+-   [ ] 모든 링크 작동 확인
+-   [ ] 이미지 로딩 확인
+-   [ ] 폼 제출 테스트 (필요시)
+
+### SEO 최적화
+
+-   [ ] 모든 `https://your-domain.com`을 실제 도메인으로 변경
+    -   `app/layout.tsx`의 `metadataBase`
+    -   `app/(marketing)/layout.tsx`의 모든 URL
+    -   `app/(marketing)/page.tsx`의 JSON-LD
+    -   `app/sitemap.ts`의 URL
+    -   `app/robots.ts`의 sitemap/host
+-   [ ] `public/og/flowpilot-landing.png` 이미지 추가 (1200×630px, 2MB 이하)
+-   [ ] 페이지 소스에서 Meta 태그 확인 (`<title>`, `<meta name="description">`)
+-   [ ] Open Graph 태그 확인 (`og:title`, `og:description`, `og:image`)
+-   [ ] Twitter Card 태그 확인
+-   [ ] JSON-LD 스크립트 확인
+-   [ ] `https://your-domain.com/robots.txt` 접근 확인
+-   [ ] `https://your-domain.com/sitemap.xml` 접근 확인
+
+### 소셜 미디어 미리보기
+
+-   [ ] [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)에서 OG 이미지 확인
+-   [ ] [Twitter Card Validator](https://cards-dev.twitter.com/validator)에서 카드 확인
+-   [ ] [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)에서 미리보기 확인
+
+### Google Search Console 설정
+
+1.  [Google Search Console](https://search.google.com/search-console)에 사이트 등록
+2.  HTML 태그 또는 DNS 레코드로 소유권 확인
+3.  사이트맵 제출: `https://your-domain.com/sitemap.xml`
+4.  URL 검사 도구로 루트 페이지 색인 요청
+5.  커버리지 리포트에서 오류 모니터링
+
+### 성능 및 보안
+
+-   [ ] HTTPS 설정 확인
+-   [ ] SSL 인증서 유효성 확인
+-   [ ] 페이지 속도 테스트 (Lighthouse)
+-   [ ] Core Web Vitals 확인
+-   [ ] 보안 헤더 설정 확인 (필요시)
+-   [ ] CORS 설정 확인 (필요시)
+
+### 모니터링 설정
+
+-   [ ] 에러 로깅 도구 설정 (Sentry, 등)
+-   [ ] 애널리틱스 설정 (Google Analytics 4)
+-   [ ] 구글 태그 매니저 설정 (필요시)
+-   [ ] 업타임 모니터링 설정 (필요시)
+
+### 추가 확인사항
+
+-   [ ] 도메인 DNS 설정 확인
+-   [ ] CDN 설정 확인 (필요시)
+-   [ ] 백업 전략 수립
+-   [ ] 배포 롤백 계획 수립
+
+자세한 SEO 체크리스트는 [`docs/seo/SEO_CHECKLIST.md`](docs/seo/SEO_CHECKLIST.md)를 참고하세요.
+
 ## 라이센스
 
 MIT

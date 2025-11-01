@@ -13,7 +13,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-    title: 'SaaS Starter Kit',
+    metadataBase: new URL('https://your-domain.com'),
+    title: { default: 'FlowPilot', template: '%s - FlowPilot' },
     description: 'Next.js 16 기반 SaaS 서비스 개발을 위한 스타터 킷'
 }
 
